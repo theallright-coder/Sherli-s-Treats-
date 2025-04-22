@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Sherli's Treats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.jpeg" alt="Sherli's Treats Logo"><div class="logo-text">Sherli's Treats </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="search-box">
+            <input type="text" id="searchInputDetail" placeholder="Search...">
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <main class="product-detail-page">
+        <div class="container">
+            <section class="product-info">
+                <h2>Product Details</h2>
+                <div class="detail-image">
+                    <img src="" alt="Product Image">
+                </div>
+                <div class="detail-description">
+                    <h3>Product Name</h3>
+                    <p class="price">₹Price</p>
+                    <p>More detailed description of the product can go here.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </section>
+            <p><a href="products.html">Back to Products</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <h3 id="contact">Contact Us</h3>
+        <p>Email: <a href="mailto:jainshalini939@gmail.com">jainshalini939@gmail.com</a> | Phone: +91-9977069569</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/sherlistreats?igsh=ZHY0dGJoaDJhaW5l"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/9977069569"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2025 Sherli's Treats. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        // Basic search functionality for the detail page
+        const searchInputDetail = document.getElementById('searchInputDetail');
+        // You might want to adjust this to search within the product details if you load multiple details here.
+        // For now, it will behave like the main page search.
+        searchInputDetail.addEventListener('input', function () {
+            const searchText = this.value.toLowerCase();
+            const bodyText = document.body.textContent.toLowerCase();
+            document.body.style.display = bodyText.includes(searchText) ? 'block' : 'none';
+            // This is a very basic implementation. You'd likely want to target specific elements.
+        });
+
+        // You would typically use JavaScript here to:
+        // 1. Get the product identifier from the URL (e.g., product_detail.html?id=Masala%20Mathri)
+        // 2. Fetch the detailed information for that product based on the identifier.
+        // 3. Populate the image, name, price, and description.
+
+        // For this basic example, we'll set some placeholder content based on a possible URL parameter.
+        document.addEventListener('DOMContentLoaded', () => {
+            const detailImage = document.querySelector('.detail-image img');
+            const detailName = document.querySelector('.detail-description h3');
+            const detailPrice = document.querySelector('.detail-description .price');
+            const detailDescription = document.querySelector('.detail-description p:last-child');
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const productNameFromURL = urlParams.get('name');
+
+            if (productNameFromURL) {
+                // In a real scenario, you would have a data source to fetch details
+                if (productNameFromURL === 'Masala Mathri') {
+                    detailImage.src = 'images/Masala Mathri.jpeg';
+                    detailImage.alt = 'Masala Mathri';
+                    detailName.textContent = 'Masala Mathri';
+                    detailPrice.textContent = '₹320';
+                    detailDescription.textContent = 'Crispy and savory Indian crackers seasoned with a blend of aromatic spices. Perfect for tea-time or as a snack anytime!';
+                } else if (productNameFromURL === 'Mini Samosa') {
+                    detailImage.src = 'images/samosasrcoll.jpg';
+                    detailImage.alt = 'Mini Samosa';
+                    detailName.textContent = 'Mini Samosa';
+                    detailPrice.textContent = '₹340';
+                    detailDescription.textContent = 'Bite-sized savory pastries filled with a delicious potato and pea mixture, seasoned with traditional Indian spices. A perfect party snack!';
+                } else if (productNameFromURL === 'Mini Kachori') {
+                    detailImage.src = 'images/Mini Kachori.jpeg';
+                    detailImage.alt = 'Mini Kachori';
+                    detailName.textContent = 'Mini Kachori';
+                    detailPrice.textContent = '₹320';
+                    detailDescription.textContent = 'Flaky and spicy mini pastries filled with a flavorful lentil and spice mixture. A delightful savory treat.';
+                }
+                // Add more conditions for other products as needed
+            } else {
+                // Default placeholder if no product name in URL
+                detailName.textContent = 'Product Details';
+                detailDescription.textContent = 'Detailed information about the selected product will be displayed here.';
+            }
+        });
+    </script>
+</body>
+</html

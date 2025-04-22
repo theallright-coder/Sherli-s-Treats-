@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Sherli's Treats</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpeg" alt="Sherli's Treats Logo">
+            <div class="logo-text">Sherli's Treats</div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Products</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" id="searchInputProducts" placeholder="Search Products...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cart-icon-container">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+                <span class="cart-count">0</span>
+                <div class="cart-dropdown">
+                    <h3>Your Cart</h3>
+                    <ul id="cartItems"></ul>
+                    <p id="cartTotal">Total: ₹0</p>
+                    <a id="whatsappBuy" href="https://wa.me/919876543210?text=I%20want%20to%20buy%20items%20from%20Sherli%27s%20Treats" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Buy Now on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="product-section" id="productSection">
+        <div class="product bestseller">
+            <a href="product_detail.html?name=Masala%20Mathri">
+                <img src="images/Masala Mathri.jpeg" alt="Mathri" height="225" width="225">
+                <span class="bestseller-tag">Bestseller</span>
+                <h3>Masala Mathri</h3>
+                <p>₹320</p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <a href="product_detail.html?name=Mini%20Samosa">
+                <img src="images/samosasrcoll.jpg" alt="Samosa" height="225" width="225">
+                <h3>Mini Samosa</h3>
+                <p>₹340</p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product bestseller">
+            <a href="product_detail.html?name=Mini%20Kachori">
+                <img src="images/Mini Kachori.jpeg" alt="Kachori" height="225" width="225">
+                <span class="bestseller-tag">Bestseller</span>
+                <h3>Mini Kachori</h3>
+                <p>₹320</p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <a href="product_detail.html?name=Gujiya">
+                <img src="images/Gujiya.jpeg" alt="Gujiya" height="225" width="225">
+                <h3>Gujiya</h3>
+                <p>₹450</p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <a href="product_detail.html?name=Chocolate%20Cake">
+                <img src="images/chocolate cake .jpeg" alt="Chocolate Cake" height="225" width="225">
+                <h3>Chocolate Cake</h3>
+                <p>₹280-₹320</p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <a href="product_detail.html?name=Nankhatai">
+                <img src="images/Nankhatai.jpeg" alt="Nankhatai" height="225" width="225">
+                <h3>Nankhatai</h3>
+                <p>₹480</p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <a href="product_detail.html?name=Chocolate%20Aata%20Cookies">
+                <img src="images/chcolate aata cookies .jpeg" alt="Chocolate Aata Cookies" height="225" width="225">
+                <h3>Chocolate Aata Cookies</h3>
+                <p>₹480</p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <a href="product_detail.html?name=Choco%20Sauce">
+                <img src="images/Choco sauce.jpeg" alt="Choco Sauce" height="225" width="225">
+                <h3>Choco Sauce</h3>
+                <p>₹480</p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+
+    <div class="cart-section">
+        <h3>Your Cart</h3>
+        <ul id="cartItems"></ul>
+        <p id="cartTotal">Total: ₹0</p>
+        <a id="whatsappBuy" href="https://wa.me/919876543210?text=I%20want%20to%20buy%20items%20from%20Sherli%27s%20Treats" target="_blank">
+            <i class="fab fa-whatsapp"></i> Buy Now on WhatsApp
+        </a>
+    </div>
+
+    <footer>
+        <h3 id="contact">Contact Us</h3>
+        <p>Email: <a href="mailto:jainshalini939@gmail.com">jainshalini939@gmail.com</a> | Phone: +91-9977069569</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/sherlistreats?igsh=ZHY0dGJoaDJhaW5l"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2025 Sherli's Treats. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const searchInputProducts = document.getElementById('searchInputProducts');
+        const productsPage = document.querySelectorAll('.product-section .product');
+        const cartIconProducts = document.querySelector('.header-actions .cart-icon-container');
+        const cartDropdownProducts = document.querySelector('.header-actions .cart-dropdown');
+
+        if (searchInputProducts) {
+            searchInputProducts.addEventListener('input', function () {
+                const searchText = this.value.toLowerCase();
+                productsPage.forEach(product => {
+                    const text = product.textContent.toLowerCase();
+                    product.style.display = text.includes(searchText) ? 'block' : 'none';
+                });
+            });
+        }
+
+        if (cartIconProducts && cartDropdownProducts) {
+            cartIconProducts.addEventListener('click', function() {
+                cartDropdownProducts.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!cartIconProducts.contains(event.target) && !cartDropdownProducts.contains(event.target)) {
+                    cartDropdownProducts.classList.remove('active');
+                }
+            });
+        }
+
+        // Cart functionality (for products page)
+        let cart = [];
+        const cartItemsDisplay = document.getElementById('cartItems');
+        const cartTotalDisplay = document.getElementById('cartTotal');
+        const whatsappBuyButton = document.getElementById('whatsappBuy');
+        const cartCountSpan = document.querySelector('.cart-count');
+
+        function updateCartDisplay() {
+            if (cartItemsDisplay && cartTotalDisplay && whatsappBuyButton && cartCountSpan) {
+                cartItemsDisplay.innerHTML = '';
+                let total = 0;
+                cart.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.productName} - ₹${item.price}`;
+                    cartItemsDisplay.appendChild(li);
+                    total += item.price;
+                });
+
+                cartTotalDisplay.textContent = `Total: ₹${total}`;
+                cartCountSpan.textContent = cart.length;
+
+                const whatsappMessage = `I want to buy these items:\n${cart.map(item => `- ${item.productName} (₹${item.price})`).join('\n')}\nTotal: ₹${total}`;
+                whatsappBuyButton.href = `https://wa.me/919977069569?text=${encodeURIComponent(whatsappMessage)}`;
+            }
+        }
+
+        function addToCart(productName, price) {
+            const existingItem = cart.find(item => item.productName === productName);
+            if (existingItem) {
+                // You might want to implement quantity increase here if needed
+                console.log('Item already in cart');
+            } else {
+                cart.push({ productName, price });
+            }
+            updateCartDisplay();
+        }
+
+        document.querySelectorAll('.product-section .add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const productElement = button.previousElementSibling;
+                if (productElement && productElement.querySelector('h3') && productElement.querySelector('p')) {
+                    const productName = productElement.querySelector('h3').textContent;
+                    const priceText = productElement.querySelector('p').textContent.replace('₹', '').split('-')[0].trim();
+                    const price = parseInt(priceText);
+                    if (!isNaN(price)) {
+                        addToCart(productName, price);
+                    }
+                }
+            });
+        });
+
+        // Initial cart display on page load (in case of local storage implementation later)
+        updateCartDisplay();
+    </script>
+
+</body>
+</html>
